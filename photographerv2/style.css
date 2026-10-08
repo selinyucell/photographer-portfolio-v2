@@ -1,0 +1,227 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    border-radius: 4px;
+    margin: 5px 0px;
+}
+
+.hamburger {
+    display: none;
+}
+
+.headerDiv h1 {
+    font-weight: 600;
+}
+
+.aboutMe {
+    display: flex;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.aboutMe li {
+    padding-left: 40px;
+}
+
+.aboutMe a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+.aboutMe a:hover {
+    border-bottom: 1px solid black;
+}
+
+.galery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    padding: 20px;
+    width: 49%;
+    box-sizing: border-box;
+}
+
+.card img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.card img:hover {
+    opacity: 0.9;
+}
+
+.card h2 {
+    margin: 10px 0px 20px 0px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.why {
+    width: 50%;
+    margin: 30px;
+}
+
+.why h4 {
+    font-weight: 400;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.hadi {
+    font-weight: 500;
+    color: rgb(0, 94, 69);
+    font-size: 30px;
+    border-bottom: 1px solid rgb(0, 94, 69);
+    padding-bottom: 10px;
+}
+
+.contact p {
+    margin: 0px;
+    padding: 5px 0px;
+    font-style: italic;
+}
+
+@media screen and (max-width:768px) {
+    .hamburger {
+        display: block;
+        padding-left: 20px;
+        z-index: 2;
+    }
+
+    .linkDiv {
+        display: none;
+    }
+
+    .header {
+        padding: 20px;
+    }
+
+    .headerDiv h1 {
+        font-size: 24px;
+    }
+
+    .card {
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .why {
+        width: 80%;
+        padding: 20px;
+        margin: 0px;
+    }
+
+    .why h4 {
+        font-weight: 400;
+        font-size: 18px;
+        font-style: italic;
+    }
+
+    .hadi {
+        font-size: 22px;
+    }
+
+    .contact {
+        font-size: 16px;
+    }
+
+
+}
+
+.animation1 {
+    /*JSe gonderip orda classlara uygulayacagiz o yuzden burada class ismini farkli yazabiliriz.*/
+    animation: 0.5s barAnimation1;
+    animation-fill-mode: forwards;
+}
+
+.animation2 {
+    animation: 0.05s barAnimation2;
+    animation-fill-mode: forwards;
+}
+
+.animation3 {
+    animation: 0.5s barAnimation3;
+    animation-fill-mode: forwards;
+}
+
+@keyframes barAnimation1 {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(-45deg) translate(-2px, 9px);
+    }
+}
+
+@keyframes barAnimation2 {
+    from {
+        transform: scaleX(1);
+    }
+
+    to {
+        transform: scalex(0);
+    }
+}
+
+@keyframes barAnimation3 {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(45deg) translate(-2px, -9px);
+    }
+}
+
+.mobilNav{
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    top:0;
+    right: -160px;
+    padding: 20px;
+    transition: transform 0.8s;
+}
+
+.mobilNav a{
+    text-decoration: none;
+    color: black;
+    padding: 60px 0px 5px 0px;
+    font-size: 16px;
+}
+.mobilNav a:hover{
+    border-bottom: 1px solid;
+}
+
+.openSideBar{
+    transform: translateX(-160px);
+}
